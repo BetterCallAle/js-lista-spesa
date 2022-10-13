@@ -1,16 +1,18 @@
 const shopItems = ["Mela", "Pera", "Banana", "Pesto", "Pane"];
 console.log(shopItems);
 
-const ulExported = document.querySelector("ul");
-console.log(ulExported);
-
+const container = document.querySelector(".container");
+console.log(container);
+const ulCreated = document.createElement("ul")
+console.log(ulCreated);
+container.append(ulCreated)
 let i = 0;
 while (i < shopItems.length) {
     const thisItem = shopItems[i];
     
     const liCreated = document.createElement("li");
     liCreated.innerHTML = thisItem
-    ulExported.append(liCreated)
+    ulCreated.append(liCreated)
     
     i++
 }
